@@ -45,6 +45,12 @@ book = [
     # (, "633-668", 21, "Design for Synthesis"),
     # (, "669-732", 22, "Case Study: System Design Using the Gumnut Core"),
     # (, "733-791", 23, "Miscellaneous Topics1")
+
+    #    -    "Appendix A - "
+    #    -    "Appendix B - VHDL Syntax"
+    # 859-888 "Appendix C - Answers"
+    # 889-890 "References"
+    # 891-910 "Index"
 ]
 
 
@@ -83,7 +89,7 @@ def create_quiz() -> None:
             '-- ' + full_name,
             '-- Task: ',
             '',
-            '-- Answer:'
+            '-- Answer:',
             ''
         ]
         content = '\n'.join(lines)
