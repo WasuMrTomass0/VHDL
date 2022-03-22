@@ -1,0 +1,82 @@
+# End time: 19:45:25 on Mar 20,2022, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+# vsim -modelsimini C:/Projekty/VHDL/Overwatch/src/ip_divider/vunit_out/modelsim/modelsim.ini -wlf C:/Projekty/VHDL/Overwatch/src/ip_divider/vunit_out/test_output/divider_tb_lib.divider_tb.unsigned_Q8.3_Q8.3.T1_27f296722138c73d99b8e530dd7ccad0ce91f816/modelsim/vsim.wlf -quiet -t ns -onfinish stop divider_tb_lib.divider_tb(beh) -L vunit_lib -L osvvm -L common_tb_lib -L common_lib -L divider_lib -L divider_tb_lib -g/divider_tb/dividend_int_bits_g=3 -g/divider_tb/dividend_width_g=8 -g/divider_tb/runner_cfg="active python runner : true,enabled_test_cases : T1,output path : C::/Projekty/VHDL/Overwatch/src/ip_divider/vunit_out/test_output/divider_tb_lib.divider_tb.unsigned_Q8.3_Q8.3.T1_27f296722138c73d99b8e530dd7ccad0ce91f816/,tb path : C::/Projekty/VHDL/Overwatch/src/ip_divider/hdl_tb/,use_color : true" -g/divider_tb/divisor_int_bits_g=3 -g/divider_tb/divisor_width_g=8 -g/divider_tb/data_type_g=unsigned 
+# Start time: 19:45:25 on Mar 20,2022
+# ** Warning: Design size of 58059 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+#          0 ns - default                      -    INFO - CLK_PERIOD_C = 2 ns (divider_tb.vhd:127)
+#          1 ns - default                      -    INFO - +--+ (common_tb_package.vhd:29)
+#                                                          |T1|
+#                                                          +--+
+#          1 ns - default                      -    INFO - divident = 248 / 2**5 = 7.750000e+00 = 11111000 = xF8 (divider_tb.vhd:155)
+#          1 ns - default                      -    INFO - divisor  = 248 / 2**5 = 7.750000e+00 = 11111000 = xF8 (divider_tb.vhd:160)
+#          1 ns - default                      -    INFO - quotient = x / 2**10 = 1.000000e+00 = 0000000100000000 = x0100 (divider_tb.vhd:166)
+#        101 ns - check                        - WARNING - Equality check failed - Got 0000_0000_0000_0000 (0). Expected 0000_0001_0000_0000 (256). (divider_tb.vhd:178)
+#        105 ns - default                      -    INFO - divident = 185 / 2**5 = 5.781250e+00 = 10111001 = xB9 (divider_tb.vhd:155)
+#        105 ns - default                      -    INFO - divisor  = 181 / 2**5 = 5.656250e+00 = 10110101 = xB5 (divider_tb.vhd:160)
+#        105 ns - default                      -    INFO - quotient = x / 2**10 = 1.022099e+00 = 0000000100000101 = x0105 (divider_tb.vhd:166)
+#        205 ns - check                        - WARNING - Equality check failed - Got 0000_0001_0000_0000 (256). Expected 0000_0001_0000_0101 (261). (divider_tb.vhd:178)
+#        209 ns - default                      -    INFO - divident = 46 / 2**5 = 1.437500e+00 = 00101110 = x2E (divider_tb.vhd:155)
+#        209 ns - default                      -    INFO - divisor  = 41 / 2**5 = 1.281250e+00 = 00101001 = x29 (divider_tb.vhd:160)
+#        209 ns - default                      -    INFO - quotient = x / 2**10 = 1.121951e+00 = 0000000100011111 = x011F (divider_tb.vhd:166)
+#        309 ns - check                        - WARNING - Equality check failed - Got 0000_0001_0000_0101 (261). Expected 0000_0001_0001_1111 (287). (divider_tb.vhd:178)
+#        313 ns - default                      -    INFO - divident = 39 / 2**5 = 1.218750e+00 = 00100111 = x27 (divider_tb.vhd:155)
+#        313 ns - default                      -    INFO - divisor  = 36 / 2**5 = 1.125000e+00 = 00100100 = x24 (divider_tb.vhd:160)
+#        313 ns - default                      -    INFO - quotient = x / 2**10 = 1.083333e+00 = 0000000100010101 = x0115 (divider_tb.vhd:166)
+#        413 ns - check                        - WARNING - Equality check failed - Got 0000_0001_0001_1111 (287). Expected 0000_0001_0001_0101 (277). (divider_tb.vhd:178)
+#        417 ns - default                      -    INFO - divident = 70 / 2**5 = 2.187500e+00 = 01000110 = x46 (divider_tb.vhd:155)
+#        417 ns - default                      -    INFO - divisor  = 64 / 2**5 = 2.000000e+00 = 01000000 = x40 (divider_tb.vhd:160)
+#        417 ns - default                      -    INFO - quotient = x / 2**10 = 1.093750e+00 = 0000000100011000 = x0118 (divider_tb.vhd:166)
+#        517 ns - check                        - WARNING - Equality check failed - Got 0000_0001_0001_0101 (277). Expected 0000_0001_0001_1000 (280). (divider_tb.vhd:178)
+#        521 ns - default                      -    INFO - divident = 85 / 2**5 = 2.656250e+00 = 01010101 = x55 (divider_tb.vhd:155)
+#        521 ns - default                      -    INFO - divisor  = 87 / 2**5 = 2.718750e+00 = 01010111 = x57 (divider_tb.vhd:160)
+#        521 ns - default                      -    INFO - quotient = x / 2**10 = 9.770115e-01 = 0000000011111010 = x00FA (divider_tb.vhd:166)
+#        621 ns - check                        - WARNING - Equality check failed - Got 0000_0001_0001_1000 (280). Expected 0000_0000_1111_1010 (250). (divider_tb.vhd:178)
+#        625 ns - default                      -    INFO - divident = 93 / 2**5 = 2.906250e+00 = 01011101 = x5D (divider_tb.vhd:155)
+#        625 ns - default                      -    INFO - divisor  = 94 / 2**5 = 2.937500e+00 = 01011110 = x5E (divider_tb.vhd:160)
+#        625 ns - default                      -    INFO - quotient = x / 2**10 = 9.893617e-01 = 0000000011111101 = x00FD (divider_tb.vhd:166)
+#        725 ns - check                        - WARNING - Equality check failed - Got 0000_0000_1111_1010 (250). Expected 0000_0000_1111_1101 (253). (divider_tb.vhd:178)
+#        729 ns - default                      -    INFO - divident = 123 / 2**5 = 3.843750e+00 = 01111011 = x7B (divider_tb.vhd:155)
+#        729 ns - default                      -    INFO - divisor  = 119 / 2**5 = 3.718750e+00 = 01110111 = x77 (divider_tb.vhd:160)
+#        729 ns - default                      -    INFO - quotient = x / 2**10 = 1.033613e+00 = 0000000100001000 = x0108 (divider_tb.vhd:166)
+#        829 ns - check                        - WARNING - Equality check failed - Got 0000_0000_1111_1101 (253). Expected 0000_0001_0000_1000 (264). (divider_tb.vhd:178)
+#        833 ns - default                      -    INFO - divident = 154 / 2**5 = 4.812500e+00 = 10011010 = x9A (divider_tb.vhd:155)
+#        833 ns - default                      -    INFO - divisor  = 155 / 2**5 = 4.843750e+00 = 10011011 = x9B (divider_tb.vhd:160)
+#        833 ns - default                      -    INFO - quotient = x / 2**10 = 9.935484e-01 = 0000000011111110 = x00FE (divider_tb.vhd:166)
+#        933 ns - check                        - WARNING - Equality check failed - Got 0000_0001_0000_1000 (264). Expected 0000_0000_1111_1110 (254). (divider_tb.vhd:178)
+#        937 ns - default                      -    INFO - divident = 210 / 2**5 = 6.562500e+00 = 11010010 = xD2 (divider_tb.vhd:155)
+#        937 ns - default                      -    INFO - divisor  = 214 / 2**5 = 6.687500e+00 = 11010110 = xD6 (divider_tb.vhd:160)
+#        937 ns - default                      -    INFO - quotient = x / 2**10 = 9.813084e-01 = 0000000011111011 = x00FB (divider_tb.vhd:166)
+#       1037 ns - check                        - WARNING - Equality check failed - Got 0000_0000_1111_1110 (254). Expected 0000_0000_1111_1011 (251). (divider_tb.vhd:178)
+#       1041 ns - default                      -    INFO - divident = 130 / 2**5 = 4.062500e+00 = 10000010 = x82 (divider_tb.vhd:155)
+#       1041 ns - default                      -    INFO - divisor  = 135 / 2**5 = 4.218750e+00 = 10000111 = x87 (divider_tb.vhd:160)
+#       1041 ns - default                      -    INFO - quotient = x / 2**10 = 9.629630e-01 = 0000000011110110 = x00F6 (divider_tb.vhd:166)
+#       1141 ns - check                        - WARNING - Equality check failed - Got 0000_0000_1111_1011 (251). Expected 0000_0000_1111_0110 (246). (divider_tb.vhd:178)
+#       1145 ns - default                      -    INFO - divident = 0 / 2**5 = 0.000000e+00 = 00000000 = x00 (divider_tb.vhd:155)
+#       1145 ns - default                      -    INFO - divisor  = 0 / 2**5 = 0.000000e+00 = 00000000 = x00 (divider_tb.vhd:160)
+# ** Fatal: (vsim-3977) Integer divide by zero.
+#    Time: 1145 ns  Iteration: 0  Process: /divider_tb/SIMULATION_PROC File: C:/Projekty/VHDL/Overwatch/src/ip_divider/vunit_out/preprocessed/divider_tb_lib/divider_tb.vhd
+# Fatal error in Process SIMULATION_PROC at C:/Projekty/VHDL/Overwatch/src/ip_divider/vunit_out/preprocessed/divider_tb_lib/divider_tb.vhd line 163
+# 
+# HDL call sequence:
+# Stopped at C:/Projekty/VHDL/Overwatch/src/ip_divider/vunit_out/preprocessed/divider_tb_lib/divider_tb.vhd 163 Process SIMULATION_PROC
+# 
+# 
+# Test Run Failed!
+# 
+# Stack trace result from 'tb' command
+#  C:/Projekty/VHDL/Overwatch/src/ip_divider/vunit_out/preprocessed/divider_tb_lib/divider_tb.vhd 163 return [address 0xff8b798d] Process SIMULATION_PROC
+# 
+# 
+# Surrounding code from 'see' command
+#   158 :           divisor_real_v := real(divisor_int_v) / real(2 ** DIVISOR_FRAC_BITS_C);
+#   159 :           divisor_slv_v := to_slv(to_ufixed(divisor_real_v, DIVISOR_INT_BITS_G-1, -DIVISOR_FRAC_BITS_C));
+#   160 :           info("divisor  = "&to_string(divisor_int_v)&" / 2**"&to_string(DIVISOR_FRAC_BITS_C)&" = "&to_string(divisor_real_v)
+#   161 :             &" = "&to_string(divisor_slv_v)&" = x"&to_hstring(divisor_slv_v), line_num => 160, file_name => "divider_tb.vhd");
+#   162 : 
+# ->163 :           quotient_int_v  := divident_int_v / divisor_int_v;
+#   164 :           quotient_real_v := divident_real_v / divisor_real_v;
+#   165 :           quotient_slv_v := to_slv(to_ufixed(divident_real_v, DIVIDEND_INT_BITS_G-1, -DIVIDENT_FRAC_BITS_C) / to_ufixed(divisor_real_v, DIVISOR_INT_BITS_G-1, -DIVISOR_FRAC_BITS_C));
+#   166 :           info("quotient = x / 2**"&to_string(QUOTIENT_FRAC_BITS_C)&" = "&to_string(quotient_real_v)
+#   167 :             &" = "&to_string(quotient_slv_v)&" = x"&to_hstring(quotient_slv_v), line_num => 166, file_name => "divider_tb.vhd");
+# 

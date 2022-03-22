@@ -1,0 +1,40 @@
+# vsim -modelsimini C:/Projekty/VHDL/Overwatch/src/ip_divider/vunit_out/modelsim/modelsim.ini -wlf C:/Projekty/VHDL/Overwatch/src/ip_divider/vunit_out/test_output/divider_tb_lib.divider_tb.signed_Q8.3_Q8.3.T1_fd50526d56f79a3e82192b8d651095f593f492a5/modelsim/vsim.wlf -quiet -t ns -onfinish stop divider_tb_lib.divider_tb(beh) -L vunit_lib -L osvvm -L common_tb_lib -L common_lib -L divider_lib -L divider_tb_lib -g/divider_tb/dividend_int_bits_g=3 -g/divider_tb/dividend_width_g=8 -g/divider_tb/runner_cfg="active python runner : true,enabled_test_cases : T1,output path : C::/Projekty/VHDL/Overwatch/src/ip_divider/vunit_out/test_output/divider_tb_lib.divider_tb.signed_Q8.3_Q8.3.T1_fd50526d56f79a3e82192b8d651095f593f492a5/,tb path : C::/Projekty/VHDL/Overwatch/src/ip_divider/hdl_tb/,use_color : true" -g/divider_tb/divisor_int_bits_g=3 -g/divider_tb/divisor_width_g=8 -g/divider_tb/data_type_g=signed 
+# Start time: 19:45:24 on Mar 20,2022
+# ** Warning: Design size of 58059 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+#          0 ns - default                      -    INFO - CLK_PERIOD_C = 2 ns (divider_tb.vhd:127)
+#          1 ns - default                      -    INFO - +--+ (common_tb_package.vhd:29)
+#                                                          |T1|
+#                                                          +--+
+#          1 ns - default                      -    INFO - divident = 120 / 2**5 = 3.750000e+00 = 01111000 = x78 (divider_tb.vhd:155)
+#          1 ns - default                      -    INFO - divisor  = 120 / 2**5 = 3.750000e+00 = 01111000 = x78 (divider_tb.vhd:160)
+#          1 ns - default                      -    INFO - quotient = x / 2**10 = 1.000000e+00 = 0000000100000000 = x0100 (divider_tb.vhd:166)
+#        101 ns - check                        - WARNING - Equality check failed - Got 0000_0000_0000_0000 (0). Expected 0000_0001_0000_0000 (256). (divider_tb.vhd:178)
+#        105 ns - default                      -    INFO - divident = 57 / 2**5 = 1.781250e+00 = 00111001 = x39 (divider_tb.vhd:155)
+#        105 ns - default                      -    INFO - divisor  = 53 / 2**5 = 1.656250e+00 = 00110101 = x35 (divider_tb.vhd:160)
+#        105 ns - default                      -    INFO - quotient = x / 2**10 = 1.075472e+00 = 0000000100010011 = x0113 (divider_tb.vhd:166)
+#        205 ns - check                        - WARNING - Equality check failed - Got 1111_1111_0000_0000 (65280). Expected 0000_0001_0001_0011 (275). (divider_tb.vhd:178)
+# ** Error: :ieee:fixed_generic_pkg:TO_UFIXED: Negative argument passed -2.562500e+00
+#    Time: 209 ns  Iteration: 0  Process: /divider_tb/SIMULATION_PROC File: C:/Programy/ModelSim/20_1/modelsim_ase/win32aloem/../vhdl_src/ieee/fixed_generic_pkg-body.vhdl
+# Break in Subprogram to_ufixed at C:/Programy/ModelSim/20_1/modelsim_ase/win32aloem/../vhdl_src/ieee/fixed_generic_pkg-body.vhdl line 2592
+# Stopped at C:/Programy/ModelSim/20_1/modelsim_ase/win32aloem/../vhdl_src/ieee/fixed_generic_pkg-body.vhdl line 2592
+# 
+# Test Run Failed!
+# 
+# Stack trace result from 'tb' command
+#  C:/Programy/ModelSim/20_1/modelsim_ase/win32aloem/../vhdl_src/ieee/fixed_generic_pkg-body.vhdl 2592 return [address 0xff5c3c93] Subprogram to_ufixed
+# called from  C:/Projekty/VHDL/Overwatch/src/ip_divider/vunit_out/preprocessed/divider_tb_lib/divider_tb.vhd 154 return [address 0xff8b7349] Process SIMULATION_PROC
+# 
+# 
+# Surrounding code from 'see' command
+#   2587 :       return NAUF;
+#   2588 :     end if;
+#   2589 :     if (arg < 0.0) then
+#   2590 :       report fixed_generic_pkg'instance_name
+#   2591 :         & "TO_UFIXED: Negative argument passed "
+# ->2592 :         & REAL'image(arg) severity error;
+#   2593 :       return result;
+#   2594 :     end if;
+#   2595 :     presult := arg;
+#   2596 :     if presult >= (2.0**(left_index+1)) then
+# 
